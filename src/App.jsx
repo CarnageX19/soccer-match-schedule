@@ -1,10 +1,11 @@
 import './App.css'
-import { Header } from './components'
+import { Header,Panel } from './components'
 
 function App() {
   return (
     <>
       <Header />
+      <Panel />
     </>
   )
 }

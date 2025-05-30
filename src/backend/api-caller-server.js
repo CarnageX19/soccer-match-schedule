@@ -1,7 +1,9 @@
 import express from 'express';
 import conf from '../global-configs/backend-confs.js';
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 app.get('/', async (req, res) => {
     const today = new Date().toISOString().split('T')[0];
@@ -24,5 +26,5 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Api Caller Server running on http://localhost:3000');
+  ('Api Caller Server running on http://localhost:3000');
 });
