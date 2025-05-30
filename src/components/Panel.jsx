@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import footballService from "../apis/backend-caller";
 import Card from "./Card";
+import Loading from "./Loading"
 
 function Panel() {
   const [matches, setMatches] = useState([]);
   const [itemsToShow, setItemsToShow] = useState(4);
+  const [isLoading, setIsLoading] = useState(true);
 
   function formatLocalTime(utcDate) {
     const date = new Date(utcDate);
@@ -13,8 +15,14 @@ function Panel() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const matchData = await footballService.getSoccerMatches();
-      setMatches(matchData);
+      try {
+        const matchData = await footballService.getSoccerMatches();
+        setMatches(matchData || []);
+      } catch (error) {
+        console.error("Error fetching matches:", error);
+      } finally {
+        setIsLoading(false);
+      }
     };
     fetchData();
   }, []);
@@ -23,6 +31,10 @@ function Panel() {
     setItemsToShow((prev) => prev + 4);
   };
 
+  if (isLoading) {
+    return <Loading />;
+  }
+  
   return (
     <>
       <div className="flex justify-center px-4 mt-6">
