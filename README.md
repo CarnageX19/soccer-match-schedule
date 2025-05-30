@@ -1,12 +1,21 @@
-# React + Vite
+# Soccer Match Schedule
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple project to display weekly soccer match schedules across well known league.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Rename the `.env.sample` file to `.env`
+2. Edit the `.env` file to configure your environment variables as needed
 
-## Expanding the ESLint configuration
+> **Note:** The `.env` file is included in `.gitignore` and will not be committed to the repository.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Run the Project
+```bash
+npm start
+```
