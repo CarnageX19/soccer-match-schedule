@@ -17,7 +17,7 @@ function Footer() {
         <div className="text-sm">
           <span>Created by <strong>Aritra Kumar Dutta</strong></span> 
           <a
-            href=""
+            href="https://github.com/CarnageX19/soccer-match-schedule"
             target="_blank"
             className="ml-2 text-blue-500 hover:underline"
           >
