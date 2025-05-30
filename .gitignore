@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#environment variable - contains actual api key for layout of env refer to .env.sample
+.env
