@@ -1,7 +1,7 @@
 # Soccer Match Schedule
 
 A simple project to display weekly soccer match schedules across well known league.
-
+Uses API response provided by [football-data.org](https://www.football-data.org/).
 ## Setup
 
 1. Rename the `.env.sample` file to `.env`
